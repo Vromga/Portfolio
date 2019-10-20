@@ -3,16 +3,65 @@
   grid-template-columns: $col;
   grid-template-rows: $row;
 }
-
-.header{
-  @include grid(1fr 2fr, 1fr);
+*{
+  box-sizing: border-box;
+}
+.wrapper{
+@include grid();
+  justify-items: center;
   width: 1200px;
   max-width: 100%;
-  height: 1vh;
+  margin: 0 auto;
+}
+.header{
+  @include grid(1fr 2fr, 1fr);
+  width: 100%;
+  max-width: 100%;
+
   &--picture{
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
-    background: url("./assets/img/DSC_9178.jpg") no-repeat center center;
+    background: url("./assets/img/DSC_9178.jpg") no-repeat ;
+    background-size: cover;
+  }
+  &--contact_information{
+    align-self: center;
+  }
+  .contact{
+    &--list{
+      list-style: none;
+      &-elem{
+        padding:0 0 10px;
+        & a{
+          text-decoration: none;
+          color: black;
+          cursor: pointer;
+          &:hover{
+            color: lighten(black, 20%);
+          }
+        }
+      }
+    }
+  }
+}
+.education{
+  width: 100%;
+  max-width: 100%;
+  .panel{
+    border: 2px solid red;
+    &--list{
+      margin: 0;
+      padding-left: 20px;
+      display: none;
+    }
+    &--title{
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+  }
+  .panel.open .panel--list{
+    display: block;
   }
 }
