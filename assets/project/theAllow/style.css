@@ -35,6 +35,7 @@
         height: 565px;
         position: relative;
         background: url("./assets/img/background-header-pattern.jpg.png"), url("./assets/img/background-header.jpg") no-repeat;
+        overflow: hidden;
     }
 
     .slider {
@@ -127,6 +128,7 @@
         width: inherit;
         font-family: 'Segoe WP', sans-serif;
         color: #9b7d08;
+
     }
 
     .nav-button a:hover {
@@ -189,6 +191,7 @@
         background: repeating-linear-gradient(45deg, #f7f7f7, #f5f5f4 2px, #f5f5f4 2px, #f7f7f7 4px);
         -webkit-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.26), 0 -4px 5px 0 rgba(0, 0, 0, 0.26);
         box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.26), 0 -4px 5px 0 rgba(0, 0, 0, 0.26);
+        overflow: hidden;
     }
 
     .section-2 article {
@@ -248,6 +251,7 @@
         width: 1300px;
         height: 508px;
         justify-content: center;
+        overflow: hidden;
     }
 
     .twitter {
@@ -453,6 +457,7 @@
         display: flex;
         background: url("./assets/img/chest-pattern.png"), rgba(76, 76, 76, 1);
         justify-content: center;
+        overflow: hidden;
     }
 
     .gadget-wrap article {
@@ -553,6 +558,7 @@
         background: #4c4c4c;
         -webkit-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.75), 0 -4px 5px 0 rgba(0, 0, 0, 0.75);
         box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.75), 0 -4px 5px 0 rgba(0, 0, 0, 0.75);
+        overflow: hidden;
     }
 
     .footer-wrap {
@@ -671,7 +677,7 @@
         text-decoration: none;
         height: 62px;
         width: 150px;
-        color: #cda507
+        color: #cda507;
     }
 
     .nav-button a:hover {

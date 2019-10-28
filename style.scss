@@ -122,13 +122,16 @@
     display: flex;
     margin: 30px 20%;
     font-size: 32px;
-    border: 1px solid black;
+    //border: 1px solid black;
     justify-content: space-between;
 
     &--link {
       display: block;
       width: 100%;
-
+      &-img{
+        width: 400px;
+        height: auto;
+      }
       &-name {
         padding: 10px;
       }
