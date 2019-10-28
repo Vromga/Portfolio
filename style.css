@@ -5,9 +5,10 @@
 .wrapper {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
+  grid-template-rows: 35vh 15vh 50vh;
   justify-items: center;
-  width: 1200px;
+  width: 900px;
+  height: 100%;
   max-width: 100%;
   margin: 0 auto;
 }
@@ -62,6 +63,128 @@
 }
 .education .panel.open .panel--list {
   display: block;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.slider .carousel {
+  position: absolute;
+  margin: 0 auto;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+.slider .carousel--container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.slider .carousel--container-item {
+  display: none;
+  position: relative;
+  margin: 0 auto;
+}
+.slider .active,
+.slider .next {
+  display: block;
+}
+.slider .next {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.slider .description {
+  display: flex;
+  margin: 30px 20%;
+  font-size: 32px;
+  border: 1px solid black;
+  justify-content: space-between;
+}
+.slider .description--link {
+  display: block;
+  width: 100%;
+}
+.slider .description--link-name {
+  padding: 10px;
+}
+.slider .control {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 15%;
+  cursor: pointer;
+}
+.slider .control.left {
+  left: 0;
+  right: auto;
+}
+.slider .control.right {
+  left: auto;
+  right: 0;
+}
+.slider .arrow {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 100px;
+}
+.slider .arrow.right {
+  right: 50%;
+}
+.slider .to-left {
+  animation-name: left;
+}
+.slider .to-right {
+  animation-name: right;
+  animation-direction: reverse;
+}
+.slider .from-left {
+  animation-name: left;
+  animation-direction: reverse;
+}
+.slider .from-right {
+  animation-name: right;
+}
+
+@keyframes left {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+@keyframes right {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
+@media (max-width: 960px) {
+  .description {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 640px) {
+  .arrow {
+    display: none;
+  }
+
+  .description {
+    border: 0;
+  }
+  .description--link-name {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
