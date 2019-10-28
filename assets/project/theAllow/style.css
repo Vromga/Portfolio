@@ -1,0 +1,1046 @@
+@font-face {
+    font-family: 'Segoe WP';
+    src: url("./assets/fonts/SegoeWP.ttf");
+}
+
+@font-face {
+    font-family: 'Segoe WP light';
+    src: url('./assets/fonts/segoe-wp-light.ttf');
+}
+
+@font-face {
+    font-family: 'Segoe UI';
+    src: url("./assets/fonts/segoe-ui.ttf");
+}
+
+@media (min-width: 641px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+
+    .section-1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 1300px;
+        height: 565px;
+        position: relative;
+        background: url("./assets/img/background-header-pattern.jpg.png"), url("./assets/img/background-header.jpg") no-repeat;
+    }
+
+    .slider {
+        height: 57px;
+        width: 32px;
+        background: #f5c506;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .slider-left {
+        align-self: flex-start;
+        top: 53.2%;
+        transform: scaleX(-1);
+    }
+
+    .slider:hover {
+        opacity: 12%;
+    }
+
+    .slider-right {
+        align-self: flex-end;
+        top: 53.2%;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        width: 1020px;
+        height: 168px;
+    }
+
+    .logotype {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo-img {
+        margin-top: -25px;
+    }
+
+    .logotype h1 {
+        color: #fff;
+        font-size: 41.05px;
+        text-transform: uppercase;
+        font-family: 'Open Sans', sans-serif;
+        font-style: italic;
+        font-weight: normal;
+        margin-top: -17px;
+        margin-left: 7px;
+    }
+
+
+    .header nav {
+        display: flex;
+        align-items: center;
+        width: 450px;
+        height: inherit;
+    }
+
+    .header nav ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: inherit;
+        height: inherit;
+    }
+
+    .nav-button {
+        display: flex;
+        justify-content: center;
+        font-size: 17px;
+        text-transform: uppercase;
+        list-style: none;
+        width: 150px;
+        margin-top: 19px;
+        margin-left: -3px;
+        background-color: #f5c506;
+        box-shadow: -5px -5px 0 0 rgba(245, 197, 6, 0.27), -10px -10px 0 0 rgba(245, 197, 6, 0.27);
+    }
+
+    .nav-button a {
+        display: flex;
+        align-items: center;
+        justify-content: inherit;
+        text-decoration: none;
+        height: 40px;
+        width: inherit;
+        font-family: 'Segoe WP', sans-serif;
+        color: #9b7d08;
+    }
+
+    .nav-button a:hover {
+        background: #FFBC06;
+    }
+
+    .nav-button:nth-child(2) {
+        border-left: 1px solid #dcb105;
+        border-right: 1px solid #dcb105;
+    }
+
+    .nav-button a svg {
+        margin-right: 9px;
+    }
+
+    .video {
+        display: flex;
+        justify-content: flex-start;
+        width: 1020px;
+    }
+
+    .desktop {
+        margin-left: 11px;
+        margin-top: 2px;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    .name-video {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 63.05px;
+        width: 475px;
+        font-family: 'Asap', sans-serif;
+        color: white;
+        text-transform: uppercase;
+    }
+
+    .name-video span:nth-child(2) {
+        margin-top: 6px;
+        margin-left: 30px;
+    }
+
+    .name-video span:nth-child(1) {
+        color: #f5c506;
+        margin-top: -26px;
+        margin-left: 14px;
+    }
+
+    .section-2 {
+        display: flex;
+        justify-content: center;
+        width: 1300px;
+        z-index: 1;
+        height: 215px;
+        background: repeating-linear-gradient(45deg, #f7f7f7, #f5f5f4 2px, #f5f5f4 2px, #f7f7f7 4px);
+        -webkit-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.26), 0 -4px 5px 0 rgba(0, 0, 0, 0.26);
+        box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.26), 0 -4px 5px 0 rgba(0, 0, 0, 0.26);
+    }
+
+    .section-2 article {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 1020px;
+        height: inherit;
+    }
+
+    .wrap-advantages {
+        display: flex;
+        flex-direction: column;
+        height: 160px;
+        justify-content: space-evenly;
+    }
+
+    .section-2-wrap-img {
+        height: 80px;
+        width: 340px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+
+    .advantages {
+        display: flex;
+        justify-content: center;
+        width: 340px;
+        font-size: 27.05px;
+        text-transform: uppercase;
+        font-family: 'Segoe UI', sans-serif;
+        font-weight: 100;
+
+    }
+
+    .img1 {
+        margin-top: 25px;
+    }
+
+    .img2 {
+        margin-top: 25px;
+    }
+
+    .img3 {
+        margin-top: 25px;
+    }
+
+    .wrap-advantages:nth-child(2) {
+        border-right: 1px solid #d4d4d4;
+        border-left: 1px solid #d4d4d4;
+    }
+
+    .section-3 {
+        display: flex;
+        background: url("./assets/img/bg-squares.jpg");
+        width: 1300px;
+        height: 508px;
+        justify-content: center;
+    }
+
+    .twitter {
+        display: flex;
+        flex-direction: column;
+        width: 1020px;
+    }
+
+    .twitter h2 {
+        display: flex;
+        align-items: center;
+        color: #ffffff;
+        font-size: 37px;
+        height: 110px;
+        text-transform: uppercase;
+        font-family: 'PT Sans', sans-serif;
+        font-weight: normal;
+    }
+
+    .block-twitter {
+        display: flex;
+        justify-content: space-between;
+        height: 232px;
+    }
+
+    .open-twit {
+        width: 655px;
+        height: inherit;
+        display: flex;
+        justify-content: flex-start;
+        background: #ec9e03;
+    }
+
+    .open-twit > div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+
+    .text-twit {
+        height: inherit;
+        width: 315px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 29.5px;
+        padding: 25px 0 25px 25px;
+        text-align: left;
+        font-family: "Segoe WP light", sans-serif;
+        font-weight: normal;
+        color: white;
+
+    }
+
+    .plus-twit {
+        color: #ffffff;
+        align-self: flex-end;
+        height: 26px;
+        width: 25px;
+    }
+
+
+    .plus-twit-hover:hover {
+        transform: scale(1.2);
+        transition-delay: 0.1s;
+        cursor: pointer;
+    }
+
+    .plus-twiter-hover img:hover {
+        transform: scale(1.2);
+        transition-delay: 0.1s;
+        cursor: pointer;
+    }
+
+
+    .open-twit video {
+        width: 315px;
+        height: 232px;
+    }
+
+    .closed-twit {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #ec9e03;
+        height: 232px;
+        width: 330px;
+    }
+
+    .closed-twit-img {
+        width: 280px;
+        height: 232px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .closed-twit-img img {
+        margin-top: 17px;
+        margin-left: 48px;
+    }
+
+    .wrap-closed-twit {
+        width: 50px;
+        height: 232px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .wrap-closed-twit span {
+        color: #ffffff;
+        font-size: 25px;
+        align-self: flex-end;
+        font-family: "Segoe WP light", sans-serif;
+        font-weight: normal;
+        margin-right: 20px;
+        margin-top: 11px;
+    }
+
+    .wrap-closed-twit img {
+        margin-bottom: 12px;
+        margin-left: 17px;
+    }
+
+    .twitter-mobile {
+        display: none;
+    }
+
+    .big-date-twitter {
+        width: 113px;
+        height: 86px;
+        margin-bottom: 43px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: #ddb101;
+    }
+
+    .big-date-twitter span:nth-child(1) {
+        color: #ffffff;
+        font-size: 51.05px;
+        font-family: "Segoe WP", sans-serif;
+        font-weight: bold;
+        line-height: 48px;
+    }
+
+    .big-date-twitter span:nth-child(2) {
+        text-transform: uppercase;
+        color: #b26529;
+        font-size: 21px;
+        font-family: "Segoe UI", sans-serif;
+        font-weight: normal;
+    }
+
+    .wrap-range {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .range {
+        -webkit-appearance: none;
+        width: 896px;
+        height: 15px;
+        outline: none;
+        background-color: rgba(255, 255, 255, 0.48);
+        border-radius: 8px;
+    }
+
+    .range::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 200px;
+        height: 15px;
+        background-color: #b26529;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    .range::-moz-range-thumb {
+        -webkit-appearance: none;
+        width: 200px;
+        height: 15px;
+        background-color: #b26529;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    .range::-ms-thumb {
+        -webkit-appearance: none;
+        width: 200px;
+        height: 15px;
+        background-color: #b26529;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    .gadget-wrap {
+        width: 1300px;
+        height: 500px;
+        display: flex;
+        background: url("./assets/img/chest-pattern.png"), rgba(76, 76, 76, 1);
+        justify-content: center;
+    }
+
+    .gadget-wrap article {
+        width: 1020px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gadget-wrap article h2 {
+        height: 102px;
+        font-size: 39.05px;
+        color: #f5c506;
+        display: flex;
+        align-items: center;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: normal;
+        text-transform: uppercase;
+        margin-top: 10px;
+        margin-left: -5px;
+        letter-spacing: 0.5px;
+    }
+
+    .gadget-wrap-column {
+        display: flex;
+        width: 1020px;
+        justify-content: space-around;
+    }
+
+    .gadget {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .gadget-free {
+        width: 116px;
+        height: 116px;
+        position: absolute;
+        background: #f5c506;
+        border-radius: 50%;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: -19px;
+        left: -31px;
+        font-family: 'PT Sans', sans-serif;
+        font-weight: bold;
+        font-size: 16.74px;
+        text-transform: uppercase;
+        z-index: 3;
+    }
+
+    .gadget-img {
+        opacity: 57%;
+        margin-right: 25px;
+    }
+
+    .gadget-img:nth-of-type(2) {
+        opacity: 47%;
+    }
+
+    .gadget-img:nth-of-type(3) {
+        margin-top: 110px;
+    }
+
+    .privilege {
+        position: relative;
+        padding-top: 62px;
+    }
+
+    .privilege ul {
+        color: #a9a9a7;
+        font-size: 20px;
+        width: 350px;
+        height: 238px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: normal;
+        list-style: outside url("./assets/img/Ellipse.png");
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+    }
+
+    .privilege li {
+        padding-left: 20px;
+    }
+
+
+    .footer {
+        display: flex;
+        width: 1300px;
+        height: 60px;
+        justify-content: center;
+        background: #4c4c4c;
+        -webkit-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.75), 0 -4px 5px 0 rgba(0, 0, 0, 0.75);
+        box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.75), 0 -4px 5px 0 rgba(0, 0, 0, 0.75);
+    }
+
+    .footer-wrap {
+        display: flex;
+        align-items: center;
+        width: 1020px;
+        justify-content: flex-start;
+    }
+
+    .footer-logo {
+        height: 54px;
+    }
+
+    .footer-wrap span {
+        color: #ffffff;
+        font-size: 29.05px;
+        text-transform: uppercase;
+        font-family: 'Open Sans', sans-serif;
+        font-style: italic;
+        text-shadow: 0 2px 0 #000000;
+    }
+}
+
+@media (max-width: 640px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .slider {
+        display: none;
+    }
+
+    .section-1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 640px;
+        height: 390px;
+        background: url("./assets/img/background-header.jpg") no-repeat;
+    }
+
+    .header {
+        display: flex;
+        justify-content: flex-start;
+        width: 640px;
+        height: 62px;
+        background: #464646;
+    }
+
+    .logotype {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 186px;
+    }
+
+    .logotype img {
+        height: 39px;
+        margin-right: 10px;
+        margin-left: -9.5px;
+        margin-top: -1px;
+    }
+
+
+    .logotype h1 {
+        color: #fff;
+        font-size: 19.29px;
+        text-transform: uppercase;
+        font-family: 'Open Sans', sans-serif;
+        font-style: italic;
+        text-shadow: 0 2px 0 #000000;
+
+    }
+
+    .navigation {
+        display: flex;
+        align-items: center;
+        width: 454px;
+        height: inherit;
+    }
+
+    .navigation ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: inherit;
+        height: inherit;
+    }
+
+    .nav-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        text-transform: uppercase;
+        list-style: none;
+        width: 150px;
+        background-color: #f5c506;
+        height: 62px;
+        font-family: 'Segoe WP', sans-serif;
+        color: #cda507;
+    }
+
+    .nav-button a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        height: 62px;
+        width: 150px;
+        color: #cda507
+    }
+
+    .nav-button a:hover {
+        background: #FFBC06;
+    }
+
+    .nav-button a img {
+        margin-right: 12px;
+    }
+
+    .video {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .name-video {
+        display: none;
+    }
+
+    .section-2 {
+        width: 640px;
+        height: 170px;
+        background: repeating-linear-gradient(45deg, #f7f7f7, #f5f5f4 2px, #f5f5f4 2px, #f7f7f7 4px);
+        z-index: 99;
+    }
+
+    .section-2 article {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 213px;
+        height: inherit;
+        margin: 0 14px;
+    }
+
+    .wrap-advantages {
+        display: flex;
+        flex-direction: column;
+        height: 160px;
+        justify-content: space-evenly;
+    }
+
+    .section-2-wrap-img {
+        height: 80px;
+        width: 213px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+
+    .section-2-wrap-img img {
+        width: 80px;
+        height: 75px;
+    }
+
+    .advantages {
+        display: flex;
+        justify-content: center;
+        width: 213px;
+        font-size: 22px;
+        text-transform: uppercase;
+        font-family: 'Segoe UI', sans-serif;
+        font-weight: 100;
+    }
+
+
+    .section-3 {
+        display: flex;
+        width: 640px;
+        height: 485px;
+        justify-content: center;
+        background: white;
+        flex-direction: column;
+    }
+
+    .twitter {
+        display: flex;
+        flex-direction: column;
+        width: 640px;
+        padding: 10px;
+        position: relative;
+    }
+
+    .twitter h2 {
+        display: none;
+    }
+
+    .block-twitter {
+        display: flex;
+        justify-content: space-between;
+        height: 231px;
+        margin-top: 4px;
+
+    }
+
+    .open-twit {
+        width: 640px;
+        height: inherit;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .text-twit {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 272px;
+        font-family: 'Segoe WP light', sans-serif;
+        font-weight: 400;
+        font-size: 27px;
+        padding: 15px 0 24px 25px;
+        background: #ec9e03;
+        line-height: 34px;
+        color: white;
+    }
+
+    .plus-twit {
+        color: #ffffff;
+        width: 26px;
+        background: #ec9e03;
+        margin-right: 7px;
+        display: flex;
+        height: 231px;
+    }
+
+    .plus-twit img {
+        align-self: flex-end;
+        margin-bottom: 15px;
+    }
+
+    .plus-twit-hover img:hover {
+        transform: scale(1.2);
+        transition-delay: 0.1s;
+        cursor: pointer;
+    }
+
+    .open-twit video {
+        width: 315px;
+        height: 232px;
+    }
+
+    .twitter-mobile {
+        background: #f5c507;
+        height: 233px;
+        width: 640px;
+        display: flex;
+        justify-content: space-around;
+
+    }
+
+    .wrapper-twitter {
+        width: 320px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .wrapper-twitter img {
+        width: 159px;
+        height: 133px;
+        margin-left: 8px;
+        margin-top: 17px;
+    }
+
+    .twitter-message {
+        width: 320px;
+    }
+
+    .twitter-message ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        height: 233px;
+        margin-top: 6px;
+        margin-left: 14px;
+    }
+
+    .message {
+        width: 275px;
+        height: 42px;
+        border-radius: 5px;
+        background: white;
+        margin-bottom: 14px;
+        padding-left: 19px;
+        font-family: 'Arial', sans-serif;
+        font-size: 13.05px;
+        color: #8f8e8e;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    .message::before {
+        content: url(./assets/img/mes-pipka.png);
+        position: absolute;
+        left: -9px;
+        top: 17px;
+    }
+
+    .message:nth-child(2),
+    .message:nth-child(2)::before {
+        opacity: 0.7;
+    }
+
+    .message:nth-child(3),
+    .message:nth-child(3)::before {
+        opacity: 0.6;
+    }
+
+    .input-twitter form {
+        height: 30px;
+        border: 1px solid #d0a806;
+        border-radius: 8px;
+        background: white;
+        width: 275px;
+        display: flex;
+        justify-content: flex-start;
+        overflow: hidden;
+    }
+
+    .input-text {
+        width: 203px;
+        border: 0;
+    }
+
+    .button {
+        background: #d3910f;
+        width: 70px;
+        border: 0;
+        color: white;
+        font-family: 'Arial', sans-serif;
+        font-size: 15.05px;
+    }
+
+    .closed-twit {
+        display: none;
+    }
+
+
+    .big-date-twitter {
+        display: none;
+    }
+
+
+    .wrap-range {
+        display: none;
+
+    }
+
+    .gadget-wrap {
+        width: 640px;
+        height: 467px;
+        display: flex;
+        background: url("./assets/img/chest-pattern.png"), rgba(76, 76, 76, 1);
+        justify-content: center;
+    }
+
+    .gadget-wrap article {
+        width: 640px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gadget-wrap article h2 {
+        height: 130px;
+        font-size: 39.05px;
+        color: #f5c506;
+        display: flex;
+        align-items: center;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: normal;
+        text-transform: uppercase;
+        margin-top: -9px;
+        margin-left: -14px;
+        letter-spacing: 0.3px;
+    }
+
+    .gadget-wrap-column {
+        display: flex;
+        width: 640px;
+        justify-content: center;
+        height: 350px;
+        align-items: center;
+    }
+
+    .gadget {
+        position: relative;
+        width: 540px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 11px;
+        margin-top: -15px;
+    }
+
+    .gadget-free {
+        width: 116px;
+        height: 116px;
+        position: absolute;
+        background: #f5c506;
+        border-radius: 50%;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: -41px;
+        left: -30px;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-family: 'PT Sans', sans-serif;
+        font-size: 17px;
+        z-index: 30;
+    }
+
+    .gadget-img {
+        opacity: 57%;
+        margin-right: 25px;
+    }
+
+    .gadget-img:nth-of-type(2) {
+        opacity: 47%;
+    }
+
+    .gadget-img:nth-of-type(3) {
+        margin-top: 110px;
+    }
+
+    .privilege {
+        display: none;
+    }
+
+
+    .footer {
+        display: flex;
+        width: 640px;
+        height: 43px;
+        background: #4c4c4c;
+        -webkit-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.75), 0 -4px 5px 0 rgba(0, 0, 0, 0.75);
+        box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.75), 0 -4px 5px 0 rgba(0, 0, 0, 0.75);
+    }
+
+    .footer-wrap {
+        display: flex;
+        align-items: center;
+        width: 640px;
+        justify-content: flex-start;
+        margin-left: 65px;
+    }
+
+    .footer-logo {
+        height: 31px;
+        margin-right: 10px;
+    }
+
+    .footer-wrap span {
+        color: #ffffff;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-family: 'Open Sans', sans-serif;
+        font-style: italic;
+        text-shadow: 0 2px 0 #000000;
+    }
+}
+
