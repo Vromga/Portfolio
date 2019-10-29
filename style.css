@@ -1,14 +1,29 @@
+@font-face {
+  font-family: "FuturaBookC";
+  src: url("./assets/project/repaire/assets/fonts/FuturaBookC.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  font-family: "FuturaBookC", serif;
+  font-weight: normal;
+  font-style: normal;
 }
 
 .wrapper {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 35vh 15vh 50vh;
+  grid-template-rows: repeat(3, minmax(10px, auto));
+  padding: 0 15px;
   justify-items: center;
-  width: 900px;
-  height: 100%;
+  width: 1000px;
   max-width: 100%;
   margin: 0 auto;
 }
@@ -17,24 +32,26 @@
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 1fr;
+  padding-top: 15px;
   width: 100%;
   max-width: 100%;
 }
 .header--picture {
-  width: 300px;
-  height: 300px;
   border-radius: 50%;
-  background: url("./assets/img/DSC_9178.jpg") no-repeat;
-  background-size: cover;
+  width: 240px;
+  height: auto;
 }
 .header--contact_information {
   align-self: center;
+}
+.header .contact--title {
+  margin-bottom: 20px;
 }
 .header .contact--list {
   list-style: none;
 }
 .header .contact--list-elem {
-  padding: 0 0 10px;
+  padding: 0 0 2%;
 }
 .header .contact--list-elem a {
   text-decoration: none;
@@ -46,16 +63,19 @@
 }
 
 .education {
-  width: 100%;
+  width: 60%;
   max-width: 100%;
 }
 .education .panel {
-  border: 2px solid red;
+  border: 2px solid #8f8e8e;
+  padding: 10px;
 }
 .education .panel--list {
   margin: 0;
   padding-left: 20px;
   display: none;
+  animation-name: block;
+  animation-duration: 1s;
 }
 .education .panel--title {
   font-size: 18px;
@@ -73,11 +93,10 @@
 .slider .carousel {
   position: absolute;
   margin: 0 auto;
-  top: 50%;
   left: 50%;
   width: 100%;
   text-align: center;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
 }
 .slider .carousel--container {
   position: relative;
@@ -101,19 +120,39 @@
 .slider .description {
   display: flex;
   margin: 30px 20%;
-  font-size: 32px;
   justify-content: space-between;
+}
+.slider .description--about-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.slider .description--about-list {
+  font-size: 1rem;
+  list-style: none;
+  margin-bottom: 10px;
+}
+.slider .description--about-block {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+}
+.slider .description--about .block--span-two {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #8f8e8e;
+  width: 30px;
 }
 .slider .description--link {
   display: block;
+  z-index: 99;
   width: 100%;
 }
 .slider .description--link-img {
-  width: 400px;
+  width: 300px;
   height: auto;
-}
-.slider .description--link-name {
-  padding: 10px;
 }
 .slider .control {
   position: absolute;
@@ -126,33 +165,44 @@
   left: 0;
   right: auto;
 }
+.slider .control.left:hover {
+  background: linear-gradient(to left, white, #f5f4f4);
+}
 .slider .control.right {
   left: auto;
   right: 0;
+}
+.slider .control.right:hover {
+  background: linear-gradient(to right, white, #f5f4f4);
 }
 .slider .arrow {
   display: inline-block;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 100px;
+  font-size: 5rem;
+  color: #8f8e8e;
 }
 .slider .arrow.right {
   right: 50%;
 }
 .slider .to-left {
   animation-name: left;
+  animation-duration: 1s;
 }
 .slider .to-right {
   animation-name: right;
   animation-direction: reverse;
+  animation-duration: 1s;
 }
 .slider .from-left {
   animation-name: left;
   animation-direction: reverse;
+  animation-duration: 1s;
 }
 .slider .from-right {
   animation-name: right;
+  animation-duration: 1s;
 }
 
 @keyframes left {
@@ -176,16 +226,45 @@
     flex-direction: column;
     align-items: center;
   }
+  .description--about-list {
+    display: none;
+  }
+  .description--about-block.block {
+    display: none;
+  }
 }
 @media (max-width: 640px) {
-  .arrow {
+  html {
+    font-size: 14px;
+  }
+
+  .wrapper .header {
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    grid-auto-rows: minmax(200px, auto);
+  }
+  .wrapper .header--picture {
+    width: 175px;
+    align-self: center;
+  }
+  .wrapper .education {
+    grid-auto-rows: minmax(50px, auto);
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .arrow.right,
+.arrow.left,
+.control.left,
+.control.right {
     display: none;
   }
 
-  .description {
+  .slider .description {
     border: 0;
+    margin: 0;
   }
-  .description--link-name {
+  .slider .description--link-name {
     display: none;
   }
 }
