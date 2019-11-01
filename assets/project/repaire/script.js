@@ -3,8 +3,8 @@ const buttonBack = document.querySelector('.controls--back');
 const frame = document.querySelector('.frame');
 const body = document.getElementsByTagName('body');
 let vwidth = document.documentElement.clientWidth;
-
-if (vwidth < 480) {
+console.dir(vwidth);
+if (vwidth < 500) {
     buttonMobile.style.display = 'none';
 }
 buttonMobile.addEventListener('click', function () {

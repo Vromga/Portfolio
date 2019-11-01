@@ -40,7 +40,7 @@ html {
   border-radius: 50%;
   width: 180px;
   height: auto;
-  align-self: center;
+  justify-self: center;
   margin-bottom: 10px;
 }
 .header--contact_information {
@@ -274,6 +274,9 @@ html {
     font-size: 1.4rem;
     font-weight: bold;
     margin-bottom: 10px;
+  }
+  .slider .description_mobile .description_mobile--span:hover {
+    cursor: pointer;
   }
   .slider .description_mobile--about {
     display: none;
