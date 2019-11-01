@@ -30,7 +30,7 @@ html {
 
 .header {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   padding-top: 15px;
   width: 100%;
@@ -38,8 +38,10 @@ html {
 }
 .header--picture {
   border-radius: 50%;
-  width: 240px;
+  width: 180px;
   height: auto;
+  align-self: center;
+  margin-bottom: 10px;
 }
 .header--contact_information {
   align-self: center;
@@ -90,6 +92,12 @@ html {
   width: 100%;
   height: 100%;
 }
+.slider--link {
+  display: none;
+}
+.slider .description.mobile_show {
+  display: none;
+}
 .slider .carousel {
   position: absolute;
   margin: 0 auto;
@@ -116,6 +124,9 @@ html {
   position: absolute;
   top: 0;
   width: 100%;
+}
+.slider .description_mobile {
+  display: none;
 }
 .slider .description {
   display: flex;
@@ -222,9 +233,70 @@ html {
   }
 }
 @media (max-width: 960px) {
+  .header--picture {
+    width: 140px;
+  }
+
+  .education {
+    margin-bottom: 10px;
+  }
+
+  .slider {
+    position: relative;
+    padding-top: 40px;
+  }
+  .slider--link {
+    display: block;
+    z-index: 10000;
+    position: absolute;
+    top: 260px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid #8f8e8e;
+    text-decoration: none;
+    width: 100px;
+    text-align: center;
+    color: #8f8e8e;
+  }
+  .slider .description_mobile {
+    border: 2px solid #8f8e8e;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    z-index: 99;
+    left: 50%;
+    transform: translate(-50%, -40px);
+    background-color: #fff;
+  }
+  .slider .description_mobile .description_mobile--span {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .slider .description_mobile--about {
+    display: none;
+  }
+  .slider .description_mobile--about-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+  .slider .description_mobile--about-list {
+    font-size: 1rem;
+    list-style: none;
+    margin-bottom: 10px;
+  }
+  .slider .description_mobile.open2 .description_mobile--about {
+    display: block;
+  }
+
   .description {
     flex-direction: column;
     align-items: center;
+  }
+  .description--about-title {
+    display: none;
   }
   .description--about-list {
     display: none;
@@ -244,7 +316,6 @@ html {
     grid-auto-rows: minmax(200px, auto);
   }
   .wrapper .header--picture {
-    width: 175px;
     align-self: center;
   }
   .wrapper .education {
@@ -264,7 +335,7 @@ html {
     border: 0;
     margin: 0;
   }
-  .slider .description--link-name {
+  .slider .description--about-title {
     display: none;
   }
 }

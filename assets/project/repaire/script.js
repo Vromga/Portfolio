@@ -4,7 +4,7 @@ const frame = document.querySelector('.frame');
 const body = document.getElementsByTagName('body');
 let vwidth = document.documentElement.clientWidth;
 
-if (vwidth < 400) {
+if (vwidth < 480) {
     buttonMobile.style.display = 'none';
 }
 buttonMobile.addEventListener('click', function () {

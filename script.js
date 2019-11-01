@@ -4,13 +4,45 @@ titleElem.onclick = function () {
     panelElem.classList.toggle('open');
 };
 //****************** SLIDER *******************//
+const sliderDescription = [
+    `<div class="description_mobile--about-title">The Yalow</div>
+                <ul class="description_mobile--about-list">
+                    <li>Pixel perfect</li>
+                    <li>Adaptive</li>
+                    <li>Use SVG</li>
+                </ul>`,
+    `<div class="description_mobile--about-title">Repair Design Project</div>
+                <ul class="description_mobile--about-list">
+                    <li>Responsive</li>
+                    <li>Adaptive</li>
+                    <li>Use SVG</li>
+                    <li>Grid Css</li>
+                    <li>Flex Css</li>
+                </ul>`
+];
+
+const urlProject = [
+    `./assets/project/theAllow/index.html`, `./assets/project/repaire/index.html`
+];
+
+let descriptionMobile = document.querySelector('.description_mobile');
+let descriptionMobileSpan = document.querySelector('.description_mobile--span');
+descriptionMobileSpan.addEventListener('click', togleDescription);
+
+function togleDescription() {
+    descriptionMobile.classList.toggle('open2');
+}
+let descriptionMobileAbout = document.querySelector('.description_mobile--about');
+descriptionMobileAbout.innerHTML = sliderDescription[0];
+let linkChangeProject = document.querySelector('.slider--link');
+console.dir(linkChangeProject);
 
 let items = document.querySelectorAll('.carousel--container-item');
 let currentItem = 0;
 let isEnabled = true;
-
 function changeCurrentItem(n) {
     currentItem = (n + items.length) % items.length;
+
 }
 
 function hideItem(direction) {
@@ -26,8 +58,14 @@ function showItem(direction) {
     items[currentItem].addEventListener('animationend', function () {
         this.classList.remove('next', direction);
         this.classList.add('active');
+        descriptionMobileAbout.innerHTML = sliderDescription[currentItem];
+        linkChangeProject.href = urlProject[currentItem];
         isEnabled = true;
     });
+}
+
+function f() {
+    
 }
 
 function nextItem(n) {
@@ -107,7 +145,7 @@ const swipedetect = (el) => {
                 }
             }
         }
-        var touchobj = e.changedTouches[0];
+        let touchobj = e.changedTouches[0];
         startX = touchobj.pageX;
         startY = touchobj.pageY;
         startTime = new Date().getTime();
@@ -142,3 +180,5 @@ const swipedetect = (el) => {
 
 let el = document.querySelector('.carousel');
 swipedetect(el);
+
+
